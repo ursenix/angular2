@@ -1,10 +1,11 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 
 @Component({
     selector: 'my-app',
-    template: 'Hellow World'   
+    template: '<h1>{{title}}</h1><h2>{{hero}} details!</h2>'   
 })
 
 export class AppComponent{
-    
+    title = 'Sample App';
+    hero  = 'Senthil';
 }
