@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var vehicle_service_1 = require('./services/vehicle-service');
+var vehicle_service_1 = require('./vehicle/vehicle-service');
 var AppComponent = (function () {
     function AppComponent(vehicleService) {
         this.title = 'Sample App';
@@ -23,7 +23,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            templateUrl: './app/app.html',
+            templateUrl: './app/vehicle/vehicle-list.html',
             providers: [vehicle_service_1.VehicleService]
         }), 
         __metadata('design:paramtypes', [vehicle_service_1.VehicleService])

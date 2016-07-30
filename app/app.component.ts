@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
-import {VehicleService} from './services/vehicle-service';
-import {Vehicle} from './models/vehicle';
+import {VehicleService} from './vehicle/vehicle-service';
+import {Vehicle} from './vehicle/vehicle';
 
 @Component({
     selector: 'my-app',
-    templateUrl: './app/app.html',
+    templateUrl: './app/vehicle/vehicle-list.html',
     providers: [VehicleService]
 
 })

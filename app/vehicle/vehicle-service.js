@@ -1,5 +1,5 @@
 "use strict";
-var vehicle_1 = require('../models/vehicle');
+var vehicle_1 = require('./vehicle');
 var VehicleService = (function () {
     function VehicleService() {
         this.vehicle = new vehicle_1.Vehicle();
