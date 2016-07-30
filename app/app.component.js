@@ -9,17 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var vehicle_service_1 = require('./services/vehicle-service');
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(vehicleService) {
         this.title = 'Sample App';
         this.hero = 'Senthil';
+        this.vehicleService = vehicleService;
+        this.getVehicle();
     }
+    AppComponent.prototype.getVehicle = function () {
+        this.vehicle = this.vehicleService.getNewVehicle();
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: '<h1>{{title}}</h1><h2>{{hero}} details!</h2>'
+            templateUrl: './app/app.html',
+            providers: [vehicle_service_1.VehicleService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [vehicle_service_1.VehicleService])
     ], AppComponent);
     return AppComponent;
 }());
