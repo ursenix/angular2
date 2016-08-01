@@ -10,13 +10,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var vehicle_service_1 = require('./vehicle/vehicle-service');
+var emp_service_1 = require('./employee/emp.service');
 var AppComponent = (function () {
     function AppComponent(vehicleService) {
+        this.vehicleService = vehicleService;
         this.title = 'Sample App';
         this.hero = 'Senthil';
         this.vehicleService = vehicleService;
-        this.getVehicle();
+        //this.getVehicle();
     }
+    AppComponent.prototype.ngOnInit = function () {
+        this.getVehicle();
+    };
     AppComponent.prototype.getVehicle = function () {
         this.vehicle = this.vehicleService.getNewVehicle();
     };
@@ -24,7 +29,7 @@ var AppComponent = (function () {
         core_1.Component({
             selector: 'my-app',
             templateUrl: './app/vehicle/vehicle-list.html',
-            providers: [vehicle_service_1.VehicleService]
+            providers: [vehicle_service_1.VehicleService, emp_service_1.EmployeeService]
         }), 
         __metadata('design:paramtypes', [vehicle_service_1.VehicleService])
     ], AppComponent);

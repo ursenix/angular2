@@ -8,22 +8,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var vehicle_1 = require('./vehicle');
+var employee_1 = require('./employee');
 var core_1 = require('@angular/core');
-var VehicleService = (function () {
-    function VehicleService() {
-        this.vehicle = new vehicle_1.Vehicle();
+var EmployeeService = (function () {
+    function EmployeeService() {
     }
-    VehicleService.prototype.getNewVehicle = function () {
-        this.vehicle.name = 'New Vehicle';
-        this.vehicle.regNumber = 1;
-        return this.vehicle;
+    EmployeeService.prototype.getEmployees = function () {
+        var employees = [
+            new employee_1.Employee(1, 'Senthil', 20000),
+            new employee_1.Employee(2, 'Kumaran', 25000),
+            new employee_1.Employee(3, 'Shakti', 10000),
+        ];
+        return employees;
     };
-    VehicleService = __decorate([
+    EmployeeService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], VehicleService);
-    return VehicleService;
+    ], EmployeeService);
+    return EmployeeService;
 }());
-exports.VehicleService = VehicleService;
-//# sourceMappingURL=vehicle-service.js.map
+exports.EmployeeService = EmployeeService;
+//# sourceMappingURL=emp.service.js.map

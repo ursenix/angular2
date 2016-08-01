@@ -1,3 +1,4 @@
 import { bootstrap }    from '@angular/platform-browser-dynamic';
 import { AppComponent } from './app.component';
-bootstrap(<any>AppComponent);
+import {EmployeeComponent} from './employee/emp.component';
+bootstrap(<any>EmployeeComponent);

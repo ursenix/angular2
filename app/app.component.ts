@@ -1,23 +1,28 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {VehicleService} from './vehicle/vehicle-service';
 import {Vehicle} from './vehicle/vehicle';
+import {EmployeeService} from './employee/emp.service';
 
 @Component({
     selector: 'my-app',
     templateUrl: './app/vehicle/vehicle-list.html',
-    providers: [VehicleService]
+    providers: [VehicleService, EmployeeService]
 
 })
 
-export class AppComponent{
+export class AppComponent implements OnInit{
     title = 'Sample App';
     hero  = 'Senthil';
     vehicle: Vehicle;
-    vehicleService:VehicleService;
+    
 
-    constructor(vehicleService:VehicleService){
+    constructor(private vehicleService:VehicleService){
       this.vehicleService = vehicleService;
-      this.getVehicle();
+      //this.getVehicle();
+    }
+
+    ngOnInit(){
+        this.getVehicle();
     }
 
     getVehicle(){
