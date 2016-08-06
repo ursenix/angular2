@@ -8,7 +8,7 @@ export class EmployeeService{
         let employees = [
             new Employee(1, 'Senthil', 20000),
             new Employee(2, 'Kumaran', 25000),
-            new Employee(3, 'Shakti', 10000),
+            new Employee(3, 'Shakti Senthil', 10000),
         ];
         return employees;
         
