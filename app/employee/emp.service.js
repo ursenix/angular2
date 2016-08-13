@@ -15,9 +15,9 @@ var EmployeeService = (function () {
     }
     EmployeeService.prototype.getEmployees = function () {
         var employees = [
-            new employee_1.Employee(1, 'Senthil Kumaran', 20000),
-            new employee_1.Employee(2, 'Kumaran', 25000),
-            new employee_1.Employee(3, 'Shakti', 10000),
+            new employee_1.Employee(1, 'Senthil', 20000),
+            new employee_1.Employee(2, 'Kumaran**test', 25000),
+            new employee_1.Employee(3, 'Shakti Senthil', 10000),
         ];
         return employees;
     };

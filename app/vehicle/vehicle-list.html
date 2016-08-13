@@ -1,2 +1,5 @@
-<h3>{{vehicle.name}}</h3>
-<h4>{{vehicle.regNumber}}</h4>
+<ul>
+    <li *ngFor="let v of vehicles">
+        {{v.name}} | {{v.regNumber}} 
+    </li>
+</ul>

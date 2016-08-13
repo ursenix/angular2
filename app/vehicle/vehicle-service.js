@@ -13,11 +13,25 @@ var core_1 = require('@angular/core');
 var VehicleService = (function () {
     function VehicleService() {
         this.vehicle = new vehicle_1.Vehicle();
+        this.vehicles = [];
     }
     VehicleService.prototype.getNewVehicle = function () {
         this.vehicle.name = 'New Vehicle';
         this.vehicle.regNumber = 1;
         return this.vehicle;
+    };
+    VehicleService.prototype.getVehicles = function () {
+        var v1 = new vehicle_1.Vehicle();
+        v1.name = "Vehicle-1";
+        v1.regNumber = 101;
+        var v2 = new vehicle_1.Vehicle();
+        v2.name = "Vehicle-2";
+        v2.regNumber = 102;
+        //this.vehicles[0] = v1;
+        //this.vehicles[1] = v2;
+        this.vehicles.push(v1);
+        this.vehicles.push(v2);
+        return this.vehicles;
     };
     VehicleService = __decorate([
         core_1.Injectable(), 

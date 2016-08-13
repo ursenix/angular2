@@ -1,4 +1,5 @@
 import { bootstrap }    from '@angular/platform-browser-dynamic';
+import { APP_ROUTES_PROVIDER } from './app.routes';
 import { AppComponent } from './app.component';
-import {EmployeeComponent} from './employee/emp.component';
-bootstrap(<any>EmployeeComponent);
+
+bootstrap(AppComponent, [APP_ROUTES_PROVIDER]);
