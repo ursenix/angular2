@@ -26,6 +26,7 @@ var VehicleDetailComponent = (function () {
         // });
         console.log("Inside v-detail on-init ");
         console.log(this.route);
+        console.log(this.route.snapshot.queryParams['session_id']);
         console.log(this.route.snapshot.params['id']);
         //let id = this.route.params.value.id;
         var id = this.route.snapshot.params['id'];

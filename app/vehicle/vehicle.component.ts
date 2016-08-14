@@ -1,7 +1,7 @@
 
 import {Component, OnInit} from '@angular/core';
 //import { ROUTER_DIRECTIVES, RouterLink } from '@angular/router';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 import {Vehicle} from './vehicle';
 import {VehicleService} from './vehicle-service';
 
@@ -29,8 +29,16 @@ export class VehicleComponent implements OnInit {
         this.vehicles = this.vehicleService.getVehicles();
     }
     
+    
+    
     gotoVehicle(vehicle: Vehicle){
-        this.router.navigate(['/vehicle', vehicle.regNumber]);
+        let navigationExtras: NavigationExtras = { 
+            queryParams: { 'session_id': 123456 },
+            fragment: 'anchor'
+        };
+        console.log("Navigation Extras Object: ");
+        console.log(navigationExtras);
+        this.router.navigate(['/vehicle', vehicle.regNumber], navigationExtras);
     }
 
 }

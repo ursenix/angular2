@@ -26,7 +26,13 @@ var VehicleComponent = (function () {
         this.vehicles = this.vehicleService.getVehicles();
     };
     VehicleComponent.prototype.gotoVehicle = function (vehicle) {
-        this.router.navigate(['/vehicle', vehicle.regNumber]);
+        var navigationExtras = {
+            queryParams: { 'session_id': 123456 },
+            fragment: 'anchor'
+        };
+        console.log("Navigation Extras Object: ");
+        console.log(navigationExtras);
+        this.router.navigate(['/vehicle', vehicle.regNumber], navigationExtras);
     };
     VehicleComponent = __decorate([
         core_1.Component({
