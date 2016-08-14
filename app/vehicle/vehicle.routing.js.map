@@ -1,0 +1,1 @@
+{"version":3,"file":"vehicle.routing.js","sourceRoot":"","sources":["vehicle.routing.ts"],"names":[],"mappings":";AAAA,uBAAqC,iBAAiB,CAAC,CAAA;AACvD,kCAAiC,qBAAqB,CAAC,CAAA;AAEvD,IAAM,aAAa,GAAU;IAC5B,EAAE,IAAI,EAAE,UAAU,EAAE,SAAS,EAAE,oCAAgB,EAAE;CACjD,CAAC;AAEW,sBAAc,GAAG,qBAAY,CAAC,QAAQ,CAAC,aAAa,CAAC,CAAC"}

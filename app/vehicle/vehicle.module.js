@@ -9,17 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+//import { BrowserModule } from '@angular/platform-browser';
+var forms_1 = require('@angular/forms');
+var vehicle_component_1 = require('./vehicle.component');
+var vehicle_service_1 = require('./vehicle-service');
+var vehicle_routing_1 = require('./vehicle.routing');
+var VehicleModule = (function () {
+    function VehicleModule() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            templateUrl: './app/app.component.html',
+    VehicleModule = __decorate([
+        core_1.NgModule({
+            imports: [forms_1.FormsModule, vehicle_routing_1.VehicleRouting],
+            declarations: [vehicle_component_1.VehicleComponent],
+            providers: [vehicle_service_1.VehicleService],
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], VehicleModule);
+    return VehicleModule;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.VehicleModule = VehicleModule;
+//# sourceMappingURL=vehicle.module.js.map

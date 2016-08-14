@@ -1,25 +1,27 @@
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-//import { RouterModule } from '@angular/router';
+import { FormsModule }    from '@angular/forms';
+
 import { AppComponent } from './app.component';
-import { EmployeeComponent } from './employee/emp.component';
-import { VehicleComponent } from './vehicle/vehicle.component';
-import { VehicleDetailComponent } from './vehicle/vehicleDetail.component';
-import { AppRoutes, routing, appRoutingProviders } from './app.routes';
+// import { EmployeeComponent } from './employee/emp.component';
+//  import { VehicleComponent } from './vehicle/vehicle.component';
+//  import { VehicleDetailComponent } from './vehicle/vehicleDetail.component';
+
+import { EmployeeModule } from './employee/emp.module';
+
+import { routing, appRoutingProviders } from './app.routes';
 
 @NgModule({
   
   imports: [
     BrowserModule,
-    routing
+    routing,
+    EmployeeModule
   ],
   
   declarations: [
     AppComponent,
-    EmployeeComponent,
-    VehicleComponent,
-    VehicleDetailComponent
   ],
   
   providers: [

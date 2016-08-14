@@ -9,17 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+//import { BrowserModule } from '@angular/platform-browser';
+var forms_1 = require('@angular/forms');
+var emp_component_1 = require('./emp.component');
+var emp_service_1 = require('./emp.service');
+var emp_routing_1 = require('./emp.routing');
+var EmployeeModule = (function () {
+    function EmployeeModule() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            templateUrl: './app/app.component.html',
+    EmployeeModule = __decorate([
+        core_1.NgModule({
+            imports: [forms_1.FormsModule, emp_routing_1.empRouting],
+            declarations: [emp_component_1.EmployeeComponent],
+            providers: [emp_service_1.EmployeeService],
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], EmployeeModule);
+    return EmployeeModule;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.EmployeeModule = EmployeeModule;
+//# sourceMappingURL=emp.module.js.map

@@ -10,11 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
-//import { RouterModule } from '@angular/router';
 var app_component_1 = require('./app.component');
-var emp_component_1 = require('./employee/emp.component');
-var vehicle_component_1 = require('./vehicle/vehicle.component');
-var vehicleDetail_component_1 = require('./vehicle/vehicleDetail.component');
+// import { EmployeeComponent } from './employee/emp.component';
+//  import { VehicleComponent } from './vehicle/vehicle.component';
+//  import { VehicleDetailComponent } from './vehicle/vehicleDetail.component';
+var emp_module_1 = require('./employee/emp.module');
 var app_routes_1 = require('./app.routes');
 var AppModule = (function () {
     function AppModule() {
@@ -23,13 +23,11 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
-                app_routes_1.routing
+                app_routes_1.routing,
+                emp_module_1.EmployeeModule
             ],
             declarations: [
                 app_component_1.AppComponent,
-                emp_component_1.EmployeeComponent,
-                vehicle_component_1.VehicleComponent,
-                vehicleDetail_component_1.VehicleDetailComponent
             ],
             providers: [
                 app_routes_1.appRoutingProviders

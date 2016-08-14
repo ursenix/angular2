@@ -5,7 +5,6 @@ import {EmployeeService} from './emp.service';
 @Component({
     selector: 'employee',
     templateUrl: '../app/employee/employee-list.html',
-    providers: [EmployeeService]
 })
 export class EmployeeComponent implements OnInit {
 

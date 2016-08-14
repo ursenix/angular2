@@ -5,10 +5,10 @@ import { Router, NavigationExtras } from '@angular/router';
 import {Vehicle} from './vehicle';
 import {VehicleService} from './vehicle-service';
 
+
 @Component({
     selector: 'vehicle',
     templateUrl: '../app/vehicle/vehicle-list.html',
-    //directives: [ROUTER_DIRECTIVES, RouterLink]
 })
 export class VehicleComponent implements OnInit {
 
@@ -28,8 +28,6 @@ export class VehicleComponent implements OnInit {
     loadVehicles(){
         this.vehicles = this.vehicleService.getVehicles();
     }
-    
-    
     
     gotoVehicle(vehicle: Vehicle){
         let navigationExtras: NavigationExtras = { 

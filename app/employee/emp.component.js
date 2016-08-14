@@ -26,7 +26,6 @@ var EmployeeComponent = (function () {
         core_1.Component({
             selector: 'employee',
             templateUrl: '../app/employee/employee-list.html',
-            providers: [emp_service_1.EmployeeService]
         }), 
         __metadata('design:paramtypes', [emp_service_1.EmployeeService])
     ], EmployeeComponent);
