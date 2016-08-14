@@ -1,11 +1,16 @@
 "use strict";
+//import { provideRouter } from '@angular/router';
 var router_1 = require('@angular/router');
 var emp_component_1 = require('./employee/emp.component');
 var vehicle_component_1 = require('./vehicle/vehicle.component');
-exports.routes = [
-    { path: '', component: emp_component_1.EmployeeComponent, terminal: true },
+var vehicleDetail_component_1 = require('./vehicle/vehicleDetail.component');
+exports.AppRoutes = [
+    { path: '', component: emp_component_1.EmployeeComponent },
     { path: 'employee', component: emp_component_1.EmployeeComponent },
-    { path: 'vehicle', component: vehicle_component_1.VehicleComponent }
+    { path: 'vehicle', component: vehicle_component_1.VehicleComponent },
+    { path: 'vehicle/:id', component: vehicleDetail_component_1.VehicleDetailComponent }
 ];
-exports.APP_ROUTES_PROVIDER = router_1.provideRouter(exports.routes);
+exports.appRoutingProviders = [];
+exports.routing = router_1.RouterModule.forRoot(exports.AppRoutes);
+//export const APP_ROUTES_PROVIDER = provideRouter(routes); 
 //# sourceMappingURL=app.routes.js.map
