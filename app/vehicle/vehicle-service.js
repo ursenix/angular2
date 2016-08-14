@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var vehicle_1 = require('./vehicle');
 var core_1 = require('@angular/core');
+//let heroesPromise = Promise.resolve(HEROES);
 var VehicleService = (function () {
     function VehicleService() {
         this.vehicle = new vehicle_1.Vehicle();
@@ -32,6 +33,9 @@ var VehicleService = (function () {
         this.vehicles.push(v1);
         this.vehicles.push(v2);
         return this.vehicles;
+    };
+    VehicleService.prototype.getVehicle = function (id) {
+        return this.vehicles.find(function (v) { return v.regNumber == id; });
     };
     VehicleService = __decorate([
         core_1.Injectable(), 

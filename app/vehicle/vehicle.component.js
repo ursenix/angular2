@@ -9,10 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+//import { ROUTER_DIRECTIVES, RouterLink } from '@angular/router';
+var router_1 = require('@angular/router');
 var vehicle_service_1 = require('./vehicle-service');
 var VehicleComponent = (function () {
-    function VehicleComponent(vehicleService) {
+    function VehicleComponent(vehicleService, router) {
         this.vehicleService = vehicleService;
+        this.router = router;
         console.log("Vehicle Service constructor..");
     }
     VehicleComponent.prototype.ngOnInit = function () {
@@ -22,12 +25,15 @@ var VehicleComponent = (function () {
     VehicleComponent.prototype.loadVehicles = function () {
         this.vehicles = this.vehicleService.getVehicles();
     };
+    VehicleComponent.prototype.gotoVehicle = function (vehicle) {
+        this.router.navigate(['/vehicle', vehicle.regNumber]);
+    };
     VehicleComponent = __decorate([
         core_1.Component({
             selector: 'vehicle',
             templateUrl: '../app/vehicle/vehicle-list.html',
         }), 
-        __metadata('design:paramtypes', [vehicle_service_1.VehicleService])
+        __metadata('design:paramtypes', [vehicle_service_1.VehicleService, router_1.Router])
     ], VehicleComponent);
     return VehicleComponent;
 }());

@@ -1,6 +1,8 @@
 import {Vehicle} from './vehicle';
 import {Injectable} from '@angular/core';
 
+//let heroesPromise = Promise.resolve(HEROES);
+
 @Injectable()
 export class VehicleService{
 
@@ -37,6 +39,10 @@ export class VehicleService{
         return this.vehicles;
         
         }
+
+getVehicle(id) {
+    return this.vehicles.find(v => v.regNumber == id);
+  }
 
 }
 

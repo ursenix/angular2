@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
+//import { ROUTER_DIRECTIVES} from '@angular/router';
 var vehicle_service_1 = require('./vehicle/vehicle-service');
 var emp_service_1 = require('./employee/emp.service');
 var AppComponent = (function () {
@@ -19,7 +19,7 @@ var AppComponent = (function () {
         core_1.Component({
             selector: 'my-app',
             templateUrl: './app/app.component.html',
-            directives: [router_1.ROUTER_DIRECTIVES],
+            //directives: [ROUTER_DIRECTIVES],
             providers: [vehicle_service_1.VehicleService, emp_service_1.EmployeeService]
         }), 
         __metadata('design:paramtypes', [])

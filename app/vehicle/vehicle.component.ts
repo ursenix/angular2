@@ -1,18 +1,20 @@
 
 import {Component, OnInit} from '@angular/core';
+//import { ROUTER_DIRECTIVES, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import {Vehicle} from './vehicle';
 import {VehicleService} from './vehicle-service';
 
 @Component({
     selector: 'vehicle',
     templateUrl: '../app/vehicle/vehicle-list.html',
-    //providers: [EmployeeService]
+    //directives: [ROUTER_DIRECTIVES, RouterLink]
 })
 export class VehicleComponent implements OnInit {
 
     public vehicles: Vehicle[];
 
-    constructor(private vehicleService:VehicleService){
+    constructor(private vehicleService:VehicleService, private router: Router){
         console.log("Vehicle Service constructor..");
         
     }
@@ -25,6 +27,10 @@ export class VehicleComponent implements OnInit {
 
     loadVehicles(){
         this.vehicles = this.vehicleService.getVehicles();
+    }
+    
+    gotoVehicle(vehicle: Vehicle){
+        this.router.navigate(['/vehicle', vehicle.regNumber]);
     }
 
 }

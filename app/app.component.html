@@ -4,8 +4,8 @@
   </h1>
 
   <div id="menu">
-    <a [routerLink]="['/']" class="btn">Home</a>
-    <a [routerLink]="['/vehicle']" class="btn">Vehicles</a>
+    <a [routerLink]="['/']"  routerLinkActive="active" class="btn">Home</a>
+    <a [routerLink]="['/vehicle']" routerLinkActive="active" class="btn">Vehicles</a>
     <a [routerLink]="['/employee']" class="btn">Employees</a>
   </div>
 
@@ -16,5 +16,7 @@
 <div class="shadow"></div>
 
 <div id="container">
+    <h5>Above router outlet</h5>
   <router-outlet></router-outlet>
+  <h5>Below router outlet</h5>
 </div>
