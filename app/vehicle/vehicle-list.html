@@ -1,8 +1,0 @@
-<ul>
-    
-    <li *ngFor="let v of vehicles" (click)="gotoVehicle(v)">
-        {{v.name}} | {{v.regNumber}}
-        <a [routerLink]="['/vehicle', v.regNumber ]" routerLinkActive="active">{{v.name}} | {{v.regNumber}}</a>
-    </li>
-    
-</ul>
